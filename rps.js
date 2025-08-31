@@ -14,7 +14,7 @@ let getHumanChoice = function(humChoice = prompt("Rock, Paper, Scissors?!","")){
     return humanChoice;
 }
 
-playRound => (humanChoice,computerChoice) => {
+let playRound = function(humanChoice,computerChoice) {  
     if (humanChoice == 'rock' && computerChoice == 'scissors'){
         console.log("You won! Rock beats Scissors.");
     humanScore++; 
@@ -40,11 +40,12 @@ playRound => (humanChoice,computerChoice) => {
         console.log("you lost. Scissors beats Paper.")
         computerScore++;
     }
-    
 }
+    
 
 
-playGame => () => {
+
+let playGame = function() {
     for(i=0;i<5;i++){
    const humanSelection = getHumanChoice();
    const computerSelection = getComputerChoice();
@@ -61,5 +62,6 @@ playRound(humanSelection,computerSelection);
         console.log("you've won the game!");
         console.log("**************");
     }
-    
+
 }
+playGame();
